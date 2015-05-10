@@ -17,4 +17,25 @@ public class DepartmentServiceImpl implements DepartmentService {
     public List<Department> findAllDepartments() {
         return departmentDao.getAllDepartments();
     }
+
+    @Override
+    public Department findOneDepartment(Integer id) {
+        return departmentDao.getDepartmentById(id);
+    }
+
+    @Override
+    public void deleteDepartment(Integer id) {
+        Department department = departmentDao.getDepartmentById(id);
+        departmentDao.deleteDepartment(department);
+    }
+
+    @Override
+    public void insertDepartment(Department department) {
+        departmentDao.insertDepartment(department);
+    }
+
+    @Override
+    public void updateDepartment(Department department) {
+        departmentDao.updateDepartment(department);
+    }
 }

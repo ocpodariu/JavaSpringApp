@@ -12,4 +12,12 @@ public interface JobService {
 
     List<Job> findAllJobs();
 
+    Job findOneJob(Integer id);
+
+    void deleteJob(Integer id);
+
+    void insertJob(Job job);
+
+    void updateJob(Job job);
+
 }

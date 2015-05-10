@@ -12,4 +12,12 @@ public interface LocationService {
 
     List<Location> findAllLocations();
 
+    Location findOneLocation(Integer id);
+
+    void deleteLocation(Integer id);
+
+    void insertLocation(Location location);
+
+    void updateLocation(Location location);
+
 }
